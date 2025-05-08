@@ -11,7 +11,7 @@ using namespace std;
 class Table
 {
 private:
-    vector<Player> players;
+    vector<Player *> players;
     vector<Card> deck;
     int numPlayers;
 
@@ -20,7 +20,8 @@ public:
     {
         for (int i = 0; i < numPlayers; i++)
         {
-            players.push_back(Player());
+
+            players.push_back(new Player());
         }
         // Initialize deck with cards (for simplicity, using only ranks 1-13 and suits 'H', 'D', 'C', 'S')
         for (int rank = 2; rank <= 14; rank++)
