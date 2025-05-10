@@ -9,6 +9,26 @@
 
 using namespace std;
 
+class State {
+    private:
+        pair<Card, Card> player_hand;
+        vector<Card> community_cards;
+        double USBC1;
+        int time_visit;
+    public:
+        State(Table table) {
+            player_hand = table.getPlayerOneCard();
+            community_cards = table.getCommunityCard();
+            USBC1 = 0;
+            time_visit;
+        }
+        void setUSBC(double score) {USBC1 = score;}
+        void set_timevisit(int numTime) {time_visit = numTime;}
+        double getUSBC(){return USBC1;}
+        int get_timevisit(){return time_visit;}
+    
+};
+
 int main()
 {
     // Initialize the game world

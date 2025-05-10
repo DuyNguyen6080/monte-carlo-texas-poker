@@ -13,6 +13,7 @@ class Table
 private:
     vector<Player *> players;
     vector<Card> deck;
+    vector<Card> community_card;
     int numPlayers;
 
 public:
@@ -36,6 +37,8 @@ public:
     void dealCard();
     void printDeck();
     void showCardsAllPlayer();
+    pair<Card, Card> getPlayerOneCard();
+    vector<Card> getCommunityCard() {return community_card;}
 };
 
 #endif

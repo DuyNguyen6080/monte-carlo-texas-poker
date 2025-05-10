@@ -84,3 +84,11 @@ void Table::showCardsAllPlayer()
         indexplayer++;
     }
 }
+
+pair<Card, Card> Table::getPlayerOneCard()
+{
+    Card first_hand = players[0]->getfirstCard();
+    Card second_hand = players[0]->getsecondCard();
+    pair<Card, Card> player_hand = make_pair(first_hand, second_hand);
+    return player_hand;
+}

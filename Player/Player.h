@@ -25,6 +25,9 @@ public:
     void setfirstCard(Card c1) { hand[0] = c1; }  // Set first card in hand
     void setsecondCard(Card c2) { hand[1] = c2; } // Set second card in hand
     void setCard(int i, Card c) { hand[i] = c; }  // Set card at index i in hand
+
+    Card getfirstCard() {return hand[0];}
+    Card getsecondCard() {return hand[1];}
     std::string getHand()
     {
         return hand[0].get_card() + ", " + hand[1].get_card();
