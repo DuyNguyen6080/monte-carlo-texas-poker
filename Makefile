@@ -14,9 +14,10 @@ TARGET = game
 card = Card/Card.cpp
 player = Player/Player.cpp
 table = Table/Table.cpp
+state = State/State.cpp
 # Build rule
 $(TARGET): $(SRCS)
-	$(compiler) $(flags)  $(card)  $(player)  $(table) $(main) -o $(TARGET)
+	$(compiler) $(flags)  $(state) $(card)  $(player)  $(table) $(main) -o $(TARGET)
 	./$(TARGET)
 
 # Clean rule
